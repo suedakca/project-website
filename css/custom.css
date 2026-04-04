@@ -1,0 +1,633 @@
+/*===================================== 
+
+YOU CAN WRIGHT CUSTOME CSS 
+
+======================================*/
+
+.portfolio-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-post {
+  flex-basis: 33%;
+  margin-bottom: 0;
+  width: 20%;
+  padding: 0;
+  height: 35vw;
+}
+
+.portfolio-post .box {
+  width: 200vw;
+  height: 100vw;
+  text-align: center;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.portfolio-post .box a {
+  display: block;
+}
+
+.portfolio-post .box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+@media (max-width: 1459px) {
+  section.filter-section ul.filter li {
+    width: 130px;
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 1239px) {
+  section.filter-section ul.filter li {
+    width: auto;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 1023px) {
+  section.filter-section ul.filter li {
+    width: 25%;
+    float: left;
+  }
+}
+
+@media (max-width: 767px) {
+  section.filter-section ul.filter li {
+    width: 33.3333%;
+    float: left;
+  }
+}
+
+section.portfolio-section {
+  padding: 140px 0;
+  margin-left: 15px;
+}
+
+@media (max-width: 1239px) {
+  section.portfolio-section {
+    padding: 100px 0;
+  }
+}
+
+@media (max-width: 1023px) {
+  section.portfolio-section {
+    padding: 60px 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  section.portfolio-section {
+    padding: 30px 15px;
+  }
+}
+
+section.portfolio-section.fullscreen {
+  padding: 0;
+}
+
+section.portfolio-section .portfolio-box {
+  margin: 0;
+  padding: 0;
+}
+
+section.portfolio-section .portfolio-box .portfolio-post {
+  width: 33.3333%;
+  padding: 15px;
+}
+
+@media (max-width: 1239px) {
+  section.portfolio-section .portfolio-box .portfolio-post {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  section.portfolio-section .portfolio-box .portfolio-post {
+    width: 100%;
+  }
+}
+
+section.portfolio-section .portfolio-box.colum4 .portfolio-post {
+  width: 25%;
+}
+
+@media (max-width: 1239px) {
+  section.portfolio-section .portfolio-box.colum4 .portfolio-post {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  section.portfolio-section .portfolio-box.colum4 .portfolio-post {
+    width: 100%;
+  }
+}
+
+section.portfolio-section .portfolio-box.colum4 .portfolio-post.with-large-size {
+  width: 50%;
+}
+
+@media (max-width: 767px) {
+  section.portfolio-section .portfolio-box.colum4 .portfolio-post.with-large-size {
+    width: 100%;
+  }
+}
+
+section.portfolio-section .portfolio-box.colum5 .portfolio-post {
+  width: 20%;
+}
+
+@media (max-width: 1239px) {
+  section.portfolio-section .portfolio-box.colum5 .portfolio-post {
+    width: 25%;
+  }
+}
+
+@media (max-width: 1023px) {
+  section.portfolio-section .portfolio-box.colum5 .portfolio-post {
+    width: 33.3333%;
+  }
+}
+
+@media (max-width: 767px) {
+  section.portfolio-section .portfolio-box.colum5 .portfolio-post {
+    width: 100%;
+  }
+}
+
+section.portfolio-section .portfolio-box.joined {
+  margin: 0;
+}
+
+section.portfolio-section .portfolio-box.joined .portfolio-post {
+  padding: 0;
+}
+
+.portfolio-post .box {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 0;
+  width: 100%;
+}
+
+.portfolio-post .box img {
+  position: relative;
+  display: block;
+  width: 110%;
+  height: 35vw;
+  overflow: hidden;
+}
+
+.portfolio-box .box>a {
+  overflow: hidden;
+}
+
+.portfolio-post .box h4 {
+  padding: 30px;
+  color: #fff;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 3;
+}
+
+/* --------------- */
+/* MILO */
+/* --------------- */
+
+.box.effect-milo {
+  height: 35vw;
+}
+
+.box.effect-milo img {
+  max-width: none;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-30px, 0, 0) scale(1.12);
+  transform: translate3d(-30px, 0, 0) scale(1.12);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.box.effect-milo:hover img {
+  opacity: 0.5;
+  -webkit-transform: translate3d(0, 0, 0) scale(1.2);
+  transform: translate3d(0, 0, 0) scale(1.2);
+}
+
+.box.effect-milo.hover2:hover img {
+  opacity: 1;
+}
+
+.box.effect-milo p {
+  position: absolute;
+  margin-left: 50%;
+  margin-top: -50%;
+  transform: translate(-50%, -50%);
+  color: #040dbf;
+  font-family: "Nunito", sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.box.effect-milo:hover p {
+  opacity: 1;
+}
+
+a>.icon {
+  font-size: 500px;
+}
+
+/* FILTER */
+section.filter-old {
+  background-color: #ffffff;
+  background-blend-mode: multiply;
+  background-size: cover;
+  text-align: center;
+  height: 80px;
+}
+
+section.filter-old ul.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+section.filter-old ul.filter li {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0 35px;
+  margin-top: -20px;
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+section.filter-old ul.filter a {
+  display: inline-block;
+  color: #040dbf;
+  font-size: 25px;
+  font-family: "myfont";
+  position: relative;
+}
+
+section.filter-old ul.filter li.active,
+section.filter-old ul.filter li.active>a {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+section.filter-old ul.filter li:hover {
+  opacity: 1;
+}
+
+section.filter-old ul.filter li.active {
+  opacity: 1;
+}
+
+
+/* CONT _ ABOUT */
+
+.cont-about {
+  text-align: center;
+  margin-bottom: 10vw;
+  margin-top: 8vw;
+  height: 70vh;
+  font-family: "myfont";
+}
+
+.img-mobil>img {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%, 0 80%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 5% 95%);
+}
+
+/* ABOUT */
+.about-div {
+  display: flex;
+  position: relative;
+  top: -110px;
+  background-color: #040dbf;
+  max-width: 1850px;
+  max-height: 630px;
+  width: 98%;
+  height: 100%;
+  margin: 5px auto;
+}
+
+.img-about {
+  width: 60vw;
+  max-width: 1150px;
+  position: relative;
+  top: -35px;
+  margin-left: 10px;
+}
+
+.img-about>img {
+  max-width: 1150px;
+  width: 113%;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%, 0 80%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 3% 97%);
+}
+
+.img-about>img {
+  max-width: 1150px;
+  width: 113%;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%, 0 80%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 3% 97%);
+}
+
+.word-about {
+  font-family: "myfont";
+  color: #fff;
+  text-align: center;
+  width: 25%;
+  margin: 5% auto;
+}
+
+.word {
+  text-justify: distribute-all-lines;
+  width: 100%;
+  height: 100%;
+}
+
+.word>p {
+  line-height: 1.3em;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.desc {
+  position: absolute;  top: 55%; left: 65%; right: 4%; transform: translateY(-50%);
+}
+
+.word>.special {
+  line-height: 1.3em;
+  font-size: 1.9rem;
+  font-weight: 300;
+}
+
+.word>h1 {
+  font-weight: bold;
+  font-size: 4rem;
+  text-decoration: underline;
+}
+
+.word>.copyright {
+  position: absolute;
+  bottom: 10px;
+  left: 79%;
+}
+
+.circle>.fa-circle {
+  position: absolute;
+  bottom: 50px;
+  left: 80%;
+}
+
+/* CONTACT PAGE */
+
+.cont-div {
+  position: relative;
+  top: -60px;
+  max-width: 1850px;
+  max-height: 750px;
+  display: flex;
+  background-color: #040dbf;
+  width: 98%;
+  height: 100%;
+  margin: 20px auto;
+}
+
+.img-cont {
+  width: 60vw;
+  position: relative;
+  top: -35px;
+  left: -80px;
+}
+
+.img-cont>img {
+  max-width: 1430px;
+  width: 113%;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%, 0 80%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 3% 97%);
+}
+
+.word-cont {
+  font-family: "myfont";
+  color: #fff;
+  text-align: center;
+  width: 30vw;
+  margin-top: 4.5vw;
+}
+
+.cont {
+  text-justify: distribute-all-lines;
+  width: 90%;
+  height: 100%;
+  margin-left: 11%;
+}
+
+.cont>p {
+  font-size: 1.5rem;
+  line-height: 1.3em;
+  font-weight: 300;
+}
+
+.cont>h1 {
+  font-size: 3rem;
+}
+
+.cont>.copyright {
+  position: absolute;
+  bottom: 10px;
+  left: 84%;
+}
+
+.mobil {
+  display: none;
+}
+
+
+.mobil-social {
+  display: none;
+}
+
+@media (max-width: 1920px){
+  .cont>.copyright {
+    left: 83.5%;
+  }
+
+  .cont {
+    margin-left: 13%;
+  }
+  
+  .img-cont > img {
+    width: 113%;
+  }
+  
+}
+@media (max-width: 1900px) {
+  .cont-div {
+    height: 39vw;
+    margin-top: 10vw;
+  }
+
+  .cont>p {
+    font-size: 1rem;
+  }
+
+  .cont>h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 1750px) {
+  .word {
+    margin-left: 70px;
+  }
+
+  .word>.copyright {
+    position: absolute;
+    bottom: 10px;
+    left: 83%;
+  }
+
+  .word>p {
+    line-height: 1.3em;
+    font-size: 1.9rem;
+    font-weight: 300;
+  }
+
+  .word>.special {
+    line-height: 1.3em;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  .word>h1 {
+    font-weight: bold;
+    font-size: 2.7rem;
+    text-decoration: underline;
+  }
+
+  .circle>.fa-circle {
+    position: absolute;
+    bottom: 50px;
+    left: 84%;
+  }
+
+  .desc {
+    top: 52%; left: 73%; right: 4%; transform: translateY(-50%);
+  }
+}
+
+
+@media (max-width: 1700px) {
+  .about-div {
+    margin-top: 8vw;
+    height: 37vw;
+  }
+}
+
+@media (max-width: 1300px) {
+  .word>p {
+    line-height: 1.3em;
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
+
+  .word {
+    margin-left: 35px;
+  }
+
+  .word>.special {
+    line-height: 1.3em;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  .cont-div {
+    margin-top: 20vw;
+  }
+
+  .word>h1 {
+    font-weight: bold;
+    font-size: 2rem;
+    text-decoration: underline;
+  }
+
+  .word-cont {
+    margin-top: 3vw;
+  }
+
+  .cont {
+    margin-left: 5%;
+  }
+
+  .cont>p {
+    font-size: 0.6rem;
+    margin: 10px;
+  }
+
+  .cont>h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width:991px) {
+  .web {
+    display: none;
+  }
+
+  .filter-cont {
+    display: none;
+  }
+
+  .portfolio-post {
+    margin-top: 20vw;
+  }
+
+  .mobil {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    display: block;
+  }
+
+  .mobil-word > p {
+    font-size: 1.3rem;
+  }
+
+  .copyright {
+    margin: 10px auto;
+  }
+
+  .mobil-social {
+    display: block;
+  }
+
+  .mobil-about-word > p{
+    font-size: 1.9rem;
+    line-height: 2.5rem;
+  }
+}
