@@ -1,37 +1,61 @@
-/* Bootstrap & Vendors */
+@tailwind base;
+@tailwind components;
+
+/* Legacy CSS imports - must be after base/components if they need tailwind overrides */
 @import "../styles/bootstrap.min.css";
 @import "../styles/loader.min.css";
 @import "../styles/fontawesome/css/font-awesome.min.css";
 @import "../styles/magnific-popup.min.css";
 @import "../styles/owl.carousel.min.css";
-
-/* Revolution Slider */
 @import "../styles/rev-slider-4.css";
 @import "../styles/plugins/revolution/css/settings.css";
 @import "../styles/plugins/revolution/css/navigation.css";
-
-/* Theme Styles */
 @import "../styles/style.css";
 @import "../styles/custom.css";
 
-@tailwind base;
-@tailwind components;
 @tailwind utilities;
 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --brand-blue: #040DBF;
 }
 
 body {
   font-family: var(--font-poppins), sans-serif;
   color: rgb(var(--foreground-rgb));
   background: white;
+  margin: 0;
 }
 
 /* Ensure Next.js images look good in the legacy layout */
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* Header Redesign Utilities */
+.header-transparent {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: transparent !important;
+}
+
+.header-solid {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.is-fixed .main-bar {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(10px);
 }

@@ -50,7 +50,10 @@ export default function HeroSlider() {
   }, []);
 
   return (
-    <div className="rev_slider_wrapper fullscreen-container bg-black overflow-hidden relative h-screen">
+    <div 
+      className="rev_slider_wrapper fullscreen-container bg-black overflow-hidden relative" 
+      style={{ height: '100vh', width: '100vw' }}
+    >
       <AnimatePresence mode="wait">
         <motion.div
           key={current}
@@ -59,6 +62,7 @@ export default function HeroSlider() {
           exit={{ opacity: 0 }}
           transition={{ duration: 1.5 }}
           className="absolute inset-0"
+          style={{ width: '100%', height: '100%' }}
         >
           {/* Main Image */}
           <Image
@@ -67,43 +71,58 @@ export default function HeroSlider() {
             fill
             className="object-cover"
             priority
+            sizes="100vw"
           />
           
-          {/* Overlays to match Revolution Slider layers */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-[5]" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent z-[5]" />
+          {/* Overlays */}
+          <div className="absolute inset-0 z-[5]" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.6), transparent)' }} />
+          <div className="absolute inset-0 z-[5]" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.2), transparent)' }} />
 
           {/* Content Layers */}
-          <div className="absolute inset-0 flex flex-col justify-end pb-32 px-10 lg:px-32 z-10">
+          <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6 lg:px-32 z-10" style={{ zIndex: 10, paddingTop: '180px' }}>
             <motion.div
-              initial={{ y: 100, opacity: 0 }}
+              initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.8, duration: 1, ease: "easeOut" }}
+              transition={{ delay: 0.5, duration: 1, ease: "easeOut" }}
+              className="max-w-5xl"
             >
-              <div className="tp-caption BigBold-Title text-white uppercase font-black leading-none mb-4">
-                <span className="text-[#2a5ced]">{t(slides[current].titleKey)}</span>
-              </div>
+              <h1 
+                className="uppercase leading-[1.1] mb-6 drop-shadow-2xl"
+                style={{ fontSize: '64px', fontWeight: 800, color: 'white', fontFamily: 'Poppins, sans-serif' }}
+              >
+                {t(slides[current].titleKey).split(' ').map((word, i) => (
+                  <span key={i} style={{ color: i === 0 ? '#040DBF' : 'white' }}>
+                    {word}{' '}
+                  </span>
+                ))}
+              </h1>
               
-              <div className="tp-caption BigBold-SubTitle text-white text-xl lg:text-3xl font-light max-w-2xl leading-relaxed">
+              <p 
+                className="font-light tracking-wide max-w-3xl mx-auto leading-relaxed opacity-90"
+                style={{ fontSize: '22px', color: 'white', fontFamily: 'Poppins, sans-serif' }}
+              >
                 {t(slides[current].descKey)}
-              </div>
+              </p>
             </motion.div>
           </div>
-
-          {/* Decorative Border (Slide Layer 8) */}
-          <div className="hidden lg:block absolute inset-0 border-[80px] border-white/5 pointer-events-none z-[20] mx-10 my-10" />
         </motion.div>
       </AnimatePresence>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex space-x-3 z-30">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex space-x-3 z-30" style={{ zIndex: 30 }}>
         {slides.map((_, idx) => (
           <button
             key={idx}
             onClick={() => setCurrent(idx)}
-            className={`w-3 h-3 rounded-full border border-white/50 transition-all ${
-              idx === current ? 'bg-[#2a5ced] border-[#2a5ced] scale-125' : 'bg-transparent'
-            }`}
+            className="w-3 h-3 rounded-full border border-white/50 transition-all"
+            style={{ 
+              backgroundColor: idx === current ? '#040DBF' : 'transparent',
+              borderColor: idx === current ? '#040DBF' : 'rgba(255,255,255,0.5)',
+              width: '12px',
+              height: '12px',
+              borderRadius: '50%',
+              transform: idx === current ? 'scale(1.25)' : 'scale(1)'
+            }}
           />
         ))}
       </div>
