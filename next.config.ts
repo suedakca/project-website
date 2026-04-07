@@ -1,9 +1,9 @@
+import type { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin();
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
@@ -12,6 +12,7 @@ const nextConfig = {
       },
     ],
   },
+  outputFileTracingRoot: __dirname,
 };
 
 export default withNextIntl(nextConfig);

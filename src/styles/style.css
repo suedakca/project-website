@@ -7451,7 +7451,7 @@ ol.commentlist li::after {
 	color: #000;
 }
 .our-story {
-	background-image: url(../images/background/ptn-1.png);
+	background-image: none!important;
 }
 .our-story .row {
 	margin-top: 30px;

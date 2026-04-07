@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* Bootstrap & Vendors */
 @import "../styles/bootstrap.min.css";
 @import "../styles/loader.min.css";
@@ -17,6 +13,10 @@
 /* Theme Styles */
 @import "../styles/style.css";
 @import "../styles/custom.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --foreground-rgb: 0, 0, 0;
