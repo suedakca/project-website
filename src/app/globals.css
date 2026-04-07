@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Bootstrap & Vendors */
+@import "../styles/bootstrap.min.css";
+@import "../styles/loader.min.css";
+@import "../styles/fontawesome/css/font-awesome.min.css";
+@import "../styles/magnific-popup.min.css";
+@import "../styles/owl.carousel.min.css";
+
+/* Revolution Slider */
+@import "../styles/rev-slider-4.css";
+@import "../styles/plugins/revolution/css/settings.css";
+@import "../styles/plugins/revolution/css/navigation.css";
+
+/* Theme Styles */
+@import "../styles/style.css";
+@import "../styles/custom.css";
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  font-family: var(--font-poppins), sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: white;
+}
+
+/* Ensure Next.js images look good in the legacy layout */
+img {
+  max-width: 100%;
+  height: auto;
+}

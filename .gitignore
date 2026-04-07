@@ -6,3 +6,4 @@ dist/
 cgi-bin/
 *.log
 Thumbs.db
+.next
