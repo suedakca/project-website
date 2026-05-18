@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+
+/* Legacy CSS imports - must be after base/components if they need tailwind overrides */
+@import "../styles/bootstrap.min.css";
+@import "../styles/loader.min.css";
+@import "../styles/fontawesome/css/font-awesome.min.css";
+@import "../styles/magnific-popup.min.css";
+@import "../styles/owl.carousel.min.css";
+@import "../styles/rev-slider-4.css";
+@import "../styles/plugins/revolution/css/settings.css";
+@import "../styles/plugins/revolution/css/navigation.css";
+@import "../styles/style.css";
+@import "../styles/custom.css";
+
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 10, 10, 10;
+  --background-end-rgb: 0, 0, 0;
+  --brand-blue: #040DBF;
+}
+
+body {
+  font-family: var(--font-poppins), sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: #000;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Ensure Next.js images look good in the legacy layout */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Custom Scrollbar for Premium Feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-blue);
+}
+
+/* Smooth text rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
